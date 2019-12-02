@@ -1,0 +1,296 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20191201202352
+Username: AD\bbonner
+RunAs User: AD\bbonner
+Configuration Name: 
+Machine: NEWTON (Microsoft Windows NT 10.0.18362.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 3580
+PSVersion: 5.1.18362.145
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.145
+BuildVersion: 10.0.18362.145
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is aws_create_vpc-1575260632.txt
+wp-containers
+service-family
+10.1.1.0/24
+default
+10.1.1.0/25
+10.1.1.128/25
+us-west-2a
+us-west-2b
+automatic
+
+	 Begin building and configuring the virtual private cloud.
+	 Creating VPC...
+
+
+CidrBlock                   : 10.1.1.0/24
+CidrBlockAssociationSet     : {vpc-cidr-assoc-03fee82d5f52a88b4}
+DhcpOptionsId               : dopt-fecb3486
+InstanceTenancy             : default
+Ipv6CidrBlockAssociationSet : {}
+IsDefault                   : False
+OwnerId                     : 548069994063
+State                       : pending
+Tags                        : {}
+VpcId                       : vpc-0f5c8cb0258d50529
+
+	 Checking VPC vpc-0f5c8cb0258d50529 state...
+	 Building environment tags...
+
+Key   : Name
+Value : wp-containers
+
+
+Key   : service-family
+Value : wp-containers
+
+
+Key   : management-mode
+Value : automatic
+
+	 Tagging VPC...
+	 Building subnets...
+
+AssignIpv6AddressOnCreation : False
+AvailabilityZone            : us-west-2a
+AvailabilityZoneId          : usw2-az1
+AvailableIpAddressCount     : 123
+CidrBlock                   : 10.1.1.0/25
+DefaultForAz                : False
+Ipv6CidrBlockAssociationSet : {}
+MapPublicIpOnLaunch         : False
+OwnerId                     : 548069994063
+State                       : pending
+SubnetArn                   : arn:aws:ec2:us-west-2:548069994063:subnet/subnet-00fe528ea1177cf3a
+SubnetId                    : subnet-00fe528ea1177cf3a
+Tags                        : {}
+VpcId                       : vpc-0f5c8cb0258d50529
+
+	 Checking subnet 10.1.1.0/25 state...
+
+AssignIpv6AddressOnCreation : False
+AvailabilityZone            : us-west-2a
+AvailabilityZoneId          : usw2-az1
+AvailableIpAddressCount     : 123
+CidrBlock                   : 10.1.1.0/25
+DefaultForAz                : False
+Ipv6CidrBlockAssociationSet : {}
+MapPublicIpOnLaunch         : False
+OwnerId                     : 548069994063
+State                       : available
+SubnetArn                   : arn:aws:ec2:us-west-2:548069994063:subnet/subnet-00fe528ea1177cf3a
+SubnetId                    : subnet-00fe528ea1177cf3a
+Tags                        : {}
+VpcId                       : vpc-0f5c8cb0258d50529
+
+	 Tagging subnet...
+
+AssignIpv6AddressOnCreation : False
+AvailabilityZone            : us-west-2b
+AvailabilityZoneId          : usw2-az2
+AvailableIpAddressCount     : 123
+CidrBlock                   : 10.1.1.128/25
+DefaultForAz                : False
+Ipv6CidrBlockAssociationSet : {}
+MapPublicIpOnLaunch         : False
+OwnerId                     : 548069994063
+State                       : pending
+SubnetArn                   : arn:aws:ec2:us-west-2:548069994063:subnet/subnet-0f390781d1bb7ffc0
+SubnetId                    : subnet-0f390781d1bb7ffc0
+Tags                        : {}
+VpcId                       : vpc-0f5c8cb0258d50529
+
+	 Checking subnet 10.1.1.128/25 state...
+
+AssignIpv6AddressOnCreation : False
+AvailabilityZone            : us-west-2b
+AvailabilityZoneId          : usw2-az2
+AvailableIpAddressCount     : 123
+CidrBlock                   : 10.1.1.128/25
+DefaultForAz                : False
+Ipv6CidrBlockAssociationSet : {}
+MapPublicIpOnLaunch         : False
+OwnerId                     : 548069994063
+State                       : available
+SubnetArn                   : arn:aws:ec2:us-west-2:548069994063:subnet/subnet-0f390781d1bb7ffc0
+SubnetId                    : subnet-0f390781d1bb7ffc0
+Tags                        : {}
+VpcId                       : vpc-0f5c8cb0258d50529
+
+	 Tagging subnet...
+	 Retrieving route tables...
+
+Associations    : {rtbassoc-0303717e2c2344e58}
+OwnerId         : 548069994063
+PropagatingVgws : {}
+Routes          : {}
+RouteTableId    : rtb-0867468035cf434a2
+Tags            : {}
+VpcId           : vpc-0f5c8cb0258d50529
+
+
+Associations    : {rtbassoc-099219159e7dd5bfd, rtbassoc-00cf425e670f3f64e, rtbassoc-0e7d595bf56f8553c, rtbassoc-05d588cab576f8ab4}
+OwnerId         : 548069994063
+PropagatingVgws : {}
+Routes          : {, }
+RouteTableId    : rtb-0cc9a45c006173c89
+Tags            : {}
+VpcId           : vpc-0b64a855fd338d6c1
+
+
+Associations    : {rtbassoc-12be3f6f}
+OwnerId         : 548069994063
+PropagatingVgws : {}
+Routes          : {, }
+RouteTableId    : rtb-cd08a8b6
+Tags            : {}
+VpcId           : vpc-46f2343e
+
+	 Tagging route tables...
+	 Registering subnets to route table...
+rtbassoc-0105dc10de3f7fd91
+rtbassoc-0c34b8074c81b7e7a
+	 VPC built, configured, and tagged.
+
+
+	 Begin building and configuring the internet gateway.
+	 Creating internet gateway...
+
+Attachments       : {}
+InternetGatewayId : igw-04678e7005ee11768
+OwnerId           :
+Tags              : {}
+
+	 Tagging internet gateway...
+	 Attaching internet gateway to VPC...
+	 Verifying IGW-VPC attachment...
+	 Checking IGW-VPC attachment...
+
+Attachments       : {vpc-0f5c8cb0258d50529}
+InternetGatewayId : igw-04678e7005ee11768
+OwnerId           : 548069994063
+Tags              : {Name, service-family, management-mode}
+
+	 Checking IGW-VPC attachment status...
+
+Attachments       : {vpc-0f5c8cb0258d50529}
+InternetGatewayId : igw-04678e7005ee11768
+OwnerId           : 548069994063
+Tags              : {Name, service-family, management-mode}
+
+	 Internet gateway built, configured, and attached to VPC.
+
+
+	 Begin building and configuring the ELB security group.
+	 Creating load balancer security group...
+sg-0e2050158d22ab215
+	 Defining IP ranges and default egress rules...
+
+CidrIp      : 0.0.0.0/0
+Description :
+
+
+IpRanges         : {}
+FromPort         : 0
+IpProtocol       : -1
+Ipv4Ranges       : {Amazon.EC2.Model.IpRange}
+Ipv6Ranges       : {}
+PrefixListIds    : {}
+ToPort           : 0
+UserIdGroupPairs : {}
+
+	 Building security group ingress rules...
+
+IpRanges         : {}
+FromPort         : 80
+IpProtocol       : tcp
+Ipv4Ranges       : {Amazon.EC2.Model.IpRange}
+Ipv6Ranges       : {}
+PrefixListIds    : {}
+ToPort           : 80
+UserIdGroupPairs : {}
+
+
+IpRanges         : {}
+FromPort         : 443
+IpProtocol       : tcp
+Ipv4Ranges       : {Amazon.EC2.Model.IpRange}
+Ipv6Ranges       : {}
+PrefixListIds    : {}
+ToPort           : 443
+UserIdGroupPairs : {}
+
+	 Applying ingress rules...
+	 Revoking default egress rules...
+	 Applying new security group egress rules...
+	 Tagging security group...
+	 Security group created, configured, and tagged.
+
+
+	 Begin creation and configuration of load balancer.
+	 Building load balancer subnet list...
+subnet-00fe528ea1177cf3a
+subnet-0f390781d1bb7ffc0
+	 Creating elastic load balancer...
+
+AvailabilityZones     : {us-west-2a, us-west-2b}
+CanonicalHostedZoneId : Z1H1FL5HABSF5
+CreatedTime           : 12/1/2019 8:24:26 PM
+DNSName               : wp-containers-1060332559.us-west-2.elb.amazonaws.com
+IpAddressType         : ipv4
+LoadBalancerArn       : arn:aws:elasticloadbalancing:us-west-2:548069994063:loadbalancer/app/wp-containers/2447c8c3c629db61
+LoadBalancerName      : wp-containers
+Scheme                : internet-facing
+SecurityGroups        : {sg-0e2050158d22ab215}
+State                 : Amazon.ElasticLoadBalancingV2.Model.LoadBalancerState
+Type                  : application
+VpcId                 : vpc-0f5c8cb0258d50529
+
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Checking ELB state...
+	 Tagging ELB...
+	 ELB created, tagged and active.
+
+
+	 Service environment created successfully.
+	 Validating Environment...
+		 VPC vpc-0f5c8cb0258d50529 validated
+		 subnet 10.1.1.0/25 validated
+		 subnet 10.1.1.128/25 validated
+		 IGW igw-04678e7005ee11768 validated
+		 SG sg-0e2050158d22ab215 validated
+		 ELB wp-containers validated
+	 Environment successfully validated
+**********************
+Windows PowerShell transcript end
+End time: 20191201202629
+**********************
