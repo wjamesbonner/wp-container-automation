@@ -50,12 +50,12 @@ cd $PSScriptRoot
 git clone -q https://github.com/wjamesbonner/aws-service-provisioning.git
 
 #$result = .\aws-service-provisioning\setup.ps1
-$result = .\aws-service-provisioning\aws_provision_service_family.ps1 -serviceFamily $serviceFamily -loadBalancer $false
+$result = .\aws-service-provisioning\aws_provision_service_family.ps1 -serviceFamily $serviceFamily -loadBalancer $false -containerRepository $false
 
 if($result[$result.Count - 1] -eq $false) {
     Write-Output "`t Service provisioning failed, check transcript!"
     return
 }
 
-cd ..
+cd $PSScriptRoot
 rm aws-service-provisioning -Recurse -Force
